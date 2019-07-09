@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">JoyWanja</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_add_note">AddNoteActivity</string>
+    <string name="title_activity_trial">TrialActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_view_note">ViewNote</string>
+    <string name="view_note">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet atque autem cupiditate in, incidunt libero modi nam, natus nemo obcaecati perspiciatis possimus, quidem saepe unde ut voluptas voluptatum! Enim.</string>
+    <string name="title_activity_edit_note">EditNoteActivity</string>
+</resources>
