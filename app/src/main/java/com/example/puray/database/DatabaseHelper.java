@@ -6,6 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
+import android.util.Log;
+import android.widget.ImageView;
+
+import com.android.volley.toolbox.NetworkImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +17,8 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION=1;
     private static final String DATABASE_NAME="notes_db";
+    private static ImageView bitmap;
+    NetworkImageView imageViewB;
 
     public DatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -20,7 +26,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE notes(id INTEGER PRIMARY KEY AUTOINCREMENT,title TEXT,noteText TEXT)");
+
+        db.execSQL("CREATE TABLE notes(id INTEGER PRIMARY KEY, title TEXT, noteText TEXT)");
+
+
+//        db.execSQL("CREATE TABLE notes(id INTEGER PRIMARY KEY AUTOINCREMENT,title TEXT,noteText TEXT)");
 
     }
 

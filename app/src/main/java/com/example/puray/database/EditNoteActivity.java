@@ -16,6 +16,7 @@ public class EditNoteActivity extends AppCompatActivity {
     EditText etTitle;
     EditText etNote;
     Button btnUpdate;
+    Button btnEdit;
     String noteText;
     String title;
     int noteId;
@@ -36,7 +37,6 @@ public class EditNoteActivity extends AppCompatActivity {
         etTitle = findViewById(R.id.etTitle);
         etNote = findViewById(R.id.etNote);
         btnUpdate = findViewById(R.id.btnSave);
-
         imgView =findViewById(R.id.imgView);
         displayNote();
 
@@ -58,9 +58,9 @@ public class EditNoteActivity extends AppCompatActivity {
     }
 
     public void getNoteId(){
-        Bundle bundle=getIntent().getExtras();
-        if(bundle!=null){
-            noteId=bundle.getInt("NOTE_ID",0);
+        Bundle extras=getIntent().getExtras();
+        if(extras!=null){
+            noteId=extras.getInt("NOTE_ID");
         }
     }
     public void displayNote(){
@@ -71,6 +71,5 @@ public class EditNoteActivity extends AppCompatActivity {
     }
 
 }
-
 
 

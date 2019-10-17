@@ -77,14 +77,11 @@
         </LinearLayout>
 
         <Button
-            android:background=""
             android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Update"
-            android:drawableLeft="@drawable/bg_btn_button"
-
-            />
+            android:drawableLeft="@drawable/bg_btn_button" />
 
         <ImageView
             android:id="@+id/imgView"

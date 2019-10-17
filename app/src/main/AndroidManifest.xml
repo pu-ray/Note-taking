@@ -2,18 +2,29 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.puray">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="Demo"
+
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".rest.RegistrationActivity"></activity>
+        <activity android:name=".rest.LoginActivity" />
+        <activity android:name=".rest.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".database.EditNoteActivity"
             android:label="@string/title_activity_edit_note"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ViewNote"
             android:label="@string/title_activity_view_note"
@@ -21,7 +32,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.puray.com.example.puray.MainActivity" />
+                android:value="com.example.puray.MainActivity" />
         </activity>
         <activity
             android:name=".TrialActivity"
@@ -30,7 +41,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.puray.com.example.puray.MainActivity" />
+                android:value="com.example.puray.MainActivity" />
         </activity>
         <activity
             android:name=".AddNoteActivity"
@@ -39,18 +50,12 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.puray.com.example.puray.MainActivity" />
+                android:value="com.example.puray.MainActivity" />
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:label="Demo"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
